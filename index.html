@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050b1b">
+  <title>XKLIPSHOOP — Top Up Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">⚡X</span><span><b>XKLIPSHOOP</b><small>TOP UP GAME • CEPAT • AMAN</small></span></a>
+    <nav><a href="#home">Beranda</a><a href="#games">Daftar Game</a><a href="#order">Pesan</a><a href="#track">Cek Pesanan</a></nav>
+    <a class="nav-cta" href="#games">Mulai Top Up</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">⚡ WELCOME TO XKLIPSHOOP ⚡</p>
+        <h1>TOP UP GAME<br><span>FAVORITMU!</span></h1>
+        <p class="hero-desc">Isi ulang game favorit dengan proses pemesanan yang mudah dan tampilan yang nyaman.</p>
+        <div class="hero-points"><span>✦ Praktis</span><span>✦ Transparan</span><span>✦ Responsif</span></div>
+        <a class="primary-btn" href="#games">Pilih Game <b>→</b></a>
+      </div>
+      <div class="hero-art" aria-label="Ilustrasi gaming futuristik"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="energy">X</div><div class="art-caption">LEVEL UP<br><strong>YOUR GAME</strong></div></div>
+    </section>
+
+    <section class="benefits">
+      <article><b>⚡</b><span><strong>Alur Praktis</strong><small>Pemesanan mudah</small></span></article>
+      <article><b>◇</b><span><strong>Harga Jelas</strong><small>Nominal terlihat</small></span></article>
+      <article><b>✓</b><span><strong>Status Pesanan</strong><small>Bisa dicek kembali</small></span></article>
+      <article><b>◉</b><span><strong>Bantuan</strong><small>Kontak toko tersedia</small></span></article>
+    </section>
+
+    <section class="section" id="games">
+      <div class="section-heading"><div><p class="eyebrow">PILIH GAME</p><h2>Game Favoritmu</h2></div><span class="muted">Pilih salah satu untuk mulai</span></div>
+      <div class="game-grid" id="gameGrid"></div>
+    </section>
+
+    <section class="section order-section" id="order">
+      <div class="section-heading"><div><p class="eyebrow">FORM PEMESANAN</p><h2>Top Up Sekarang</h2></div><span class="muted">Mode demo — belum memproses pembayaran asli</span></div>
+      <form id="orderForm" class="order-card">
+        <label>Game<select id="gameSelect" required><option value="">Pilih game</option></select></label>
+        <label>User ID / Player ID<input id="playerId" required maxlength="40" placeholder="Masukkan User ID"></label>
+        <label>Server ID (jika diperlukan)<input id="serverId" maxlength="20" placeholder="Opsional"></label>
+        <label>Nominal<select id="productSelect" required><option value="">Pilih nominal</option></select></label>
+        <label>Nama pemesan<input id="buyerName" required maxlength="50" placeholder="Nama kamu"></label>
+        <button class="primary-btn full" type="submit">Buat Pesanan Demo →</button>
+        <p class="fine-print">Jangan masukkan password akun game atau kode OTP. Pesanan di halaman ini hanya simulasi dan tidak mengirim top up sungguhan.</p>
+      </form>
+      <div id="orderResult" class="result-card" hidden aria-live="polite"></div>
+    </section>
+
+    <section class="section tracker" id="track">
+      <div><p class="eyebrow">LACAK TRANSAKSI</p><h2>Cek Pesanan</h2><p class="muted">Masukkan kode pesanan yang muncul setelah membuat pesanan demo.</p></div>
+      <form id="trackForm" class="track-form"><input id="trackCode" placeholder="Contoh: XK-123456" required><button class="secondary-btn">Cek Status</button></form>
+      <p id="trackResult" class="track-result" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">⚡X</span><span><b>XKLIPSHOOP</b><small>TOP UP GAME • CEPAT • AMAN</small></span></a><p>© <span id="year"></span> XKLIPSHOOP. Situs demo untuk pengembangan.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
